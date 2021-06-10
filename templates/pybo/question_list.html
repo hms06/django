@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
 <div class="container my-3">
@@ -27,7 +29,12 @@
         {% endif %}
         </tbody>
     </table>
+
+    <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문 등록하기</a>
+
 </div>
+
+{% endblock %}
 
 
 
